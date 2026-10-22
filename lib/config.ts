@@ -1,4 +1,6 @@
+/** Treve office zone (Tijuana / US Pacific, not Mexico City). */
 export const TZ = 'America/Tijuana';
+export const TZ_LABEL = 'hora de Tijuana';
 export const SLOT_MINUTES = Number(process.env.SLOT_MINUTES || 30);
 export const MIN_DURATION_MINUTES = 30;
 export const MAX_DURATION_MINUTES = 240;

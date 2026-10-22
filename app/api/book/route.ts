@@ -100,6 +100,7 @@ export async function POST(req: Request) {
       timeZone: TZ,
     });
   } catch (e: any) {
-    return NextResponse.json({ error: e.message || 'Error' }, { status: 400 });
+    const message = e instanceof z.ZodError ? e.issues[0]?.message || 'Datos inválidos.' : e.message || 'Error';
+    return NextResponse.json({ error: message }, { status: 400 });
   }
 }
